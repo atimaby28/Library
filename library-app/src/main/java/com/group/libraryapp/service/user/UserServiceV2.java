@@ -40,11 +40,12 @@ public class UserServiceV2 {
     }
 
     public void deleteUser(String name) {
-        User user = userRepository.findByName(name);
+        User user = userRepository.findByName(name)
+                .orElseThrow(IllegalArgumentException::new);
 
-        if(user == null) {
-            throw  new IllegalArgumentException();
-        }
+//        if(user == null) {
+//            throw  new IllegalArgumentException();
+//        }
 
         userRepository.delete(user);
     }

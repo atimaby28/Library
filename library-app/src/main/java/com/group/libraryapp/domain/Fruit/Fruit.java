@@ -1,4 +1,4 @@
-package com.group.libraryapp.domain.user;
+package com.group.libraryapp.domain.Fruit;
 
 public class Fruit {
     private String name;
